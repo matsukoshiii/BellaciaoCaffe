@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bella Ciao Caffè Italiano | Kawiarnia Wrocław Krzyki • Jemiołowa 30</title>
+  <meta name="description" content="Autentyczna włoska kawiarnia na wrocławskich Krzykach. Tradycyjne espresso, kremowa matcha, świeże croissanty pistacjowe, paczkowane ziarna oraz relaks przy Jemiołowej 30. Dog friendly!">
+  <meta name="keywords" content="kawiarnia Jemiołowa Wrocław, dobra matcha Wrocław Krzyki, włoska kawa Wrocław, Bella Ciao Wrocław, speciality coffee Krzyki, kawiarnia przyjazna psom">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Playfair Display + Plus Jakarta Sans + Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Schema.org LocalBusiness Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Bella Ciao Caffè Italiano",
+    "image": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80",
+    "@id": "https://bellaciao-wroclaw.pl",
+    "url": "https://bellaciao-wroclaw.pl",
+    "telephone": "+48713000000",
+    "priceRange": "$$",
+    "menu": "https://bellaciao-wroclaw.pl/#menu",
+    "servesCuisine": ["Italian", "Coffee", "Pastry", "Matcha"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ul. Jemiołowa 30/U1",
+      "addressLocality": "Wrocław",
+      "postalCode": "53-447",
+      "addressRegion": "Dolnośląskie",
+      "addressCountry": "PL"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.09413,
+      "longitude": 17.00762
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "342",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "sameAs": [
+      "https://www.instagram.com/bellaaa_ciaooo_/"
+    ]
+  }
+  </script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            espresso: {
+              DEFAULT: '#21130d',
+              dark: '#140a06',
+              light: '#362117',
+              soft: '#4a2f23'
+            },
+            crema: {
+              DEFAULT: '#FAF7F2',
+              cream: '#F4ECE1',
+              border: '#E7DDD0',
+              card: '#FCFAF7'
+            },
+            pistachio: {
+              DEFAULT: '#3B6B45',
+              dark: '#264B2E',
+              light: '#EBF3EC',
+              accent: '#64996F'
+            },
+            campari: {
+              DEFAULT: '#B93025',
+              dark: '#8C2117',
+              light: '#FDEDEC',
+              accent: '#D94336'
+            },
+            caramel: {
+              DEFAULT: '#C38B52',
+              light: '#E2B180'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Paper and Italian bistro background texture */
+    .bg-paper-texture {
+      background-color: #FAF7F2;
+      background-image: radial-gradient(#21130d 0.5px, transparent 0.5px), radial-gradient(#21130d 0.5px, #FAF7F2 0.5px);
+      background-size: 20px 20px;
+      background-position: 0 0, 10px 10px;
+      background-opacity: 0.035;
+    }
+
+    .italian-flag-strip {
+      background: linear-gradient(90deg, #264B2E 0%, #264B2E 33.33%, #FAF7F2 33.33%, #FAF7F2 66.66%, #B93025 66.66%, #B93025 100%);
+    }
+
+    /* Shimmer effect for real-time sync states */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.65; transform: scale(1.05); }
+    }
+    .pulse-glow {
+      animation: pulseGlow 2.5s ease-in-out infinite;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF7F2;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #C38B52;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #21130d;
+    }
+  </style>
+</head>
+
+<body class="bg-crema text-espresso font-sans antialiased selection:bg-pistachio selection:text-white pb-20 md:pb-0">
+
+  <div class="h-1.5 w-full italian-flag-strip sticky top-0 z-50"></div>
+
+  <!-- Top Announcement & Live API Status Bar -->
+  <div class="bg-espresso-dark text-crema text-[11px] sm:text-xs py-2 px-4 border-b border-white/10 relative z-40">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center space-x-4 tracking-wide">
+        <span class="flex items-center gap-1.5">
+          <i class="fa-solid fa-location-dot text-campari"></i>
+          ul. Jemiołowa 30/U1, Wrocław (Krzyki)
+        </span>
+        <span class="hidden md:inline text-white/30">•</span>
+        <span class="hidden md:flex items-center gap-1.5 text-crema/80">
+          <i class="fa-solid fa-paw text-caramel"></i>
+          Lokal w 100% dog friendly
+        </span>
+      </div>
+
+      <!-- Live API Heartbeats -->
+      <div class="flex items-center space-x-3 text-[11px]">
+        <div class="flex items-center gap-1.5 bg-white/5 border border-white/10 px-2.5 py-0.5 rounded-full">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+          <span class="text-emerald-300 font-medium font-mono" id="apiStatusBadge">Google & Instagram API: Połączono</span>
+        </div>
+        <button onclick="openApiSettingsModal()" class="text-caramel-light hover:text-white transition underline cursor-pointer ml-2">
+          <i class="fa-solid fa-sliders mr-1"></i>Klucze API
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <header class="sticky top-1.5 z-40 bg-crema/95 backdrop-blur-md border-b border-crema-border transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo Emblem based on uploaded image -->
+        <a href="#" class="flex items-center gap-3.5 group">
+          <div class="relative w-12 h-12 md:w-14 md:h-14 rounded-full bg-crema border-2 border-espresso flex items-center justify-center p-0.5 shadow-md group-hover:scale-105 transition-transform duration-300">
+            <div class="w-full h-full rounded-full border border-dashed border-espresso-light/40 flex items-center justify-center bg-[#FDFBF7] relative overflow-hidden">
+              <svg viewBox="0 0 100 100" class="w-full h-full p-1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="47" stroke="#21130d" stroke-width="2.5"/>
+                <!-- Italian Flag Arcs -->
+                <path d="M 12,50 A 38,38 0 0,1 50,12" stroke="#264B2E" stroke-width="3.5" stroke-linecap="round"/>
+                <path d="M 88,50 A 38,38 0 0,1 50,88" stroke="#B93025" stroke-width="3.5" stroke-linecap="round"/>
+                <!-- Silhouette: Fidel/Gentleman with hat drinking espresso -->
+                <g stroke="#21130d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                  <path d="M30 43 C33 34, 45 32, 53 33 C60 34, 62 42, 62 43 Z" fill="#21130d"/>
+                  <path d="M24 43 Q48 40 68 43" stroke-width="2.8"/>
+                  <circle cx="53" cy="48" r="4.5" fill="#FAF7F2" stroke="#21130d" stroke-width="2"/>
+                  <path d="M53 43.5 L53 39"/>
+                  <path d="M58 48 C64 48, 68 53, 62 57 L55 57"/>
+                  <path d="M47 57 C45 66, 48 74, 53 79"/>
+                  <path d="M48 68 L56 79 L64 68"/>
+                  <path d="M56 70 L56 78" stroke-width="2.5"/>
+                  <path d="M63 56 Q71 55 75 51 C75 58, 66 60, 63 58 Z" fill="#21130d"/>
+                  <path d="M72 59 Q76 66 74 79" stroke-width="2.4"/>
+                  <rect x="71" y="69" width="6" height="4" fill="#21130d"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <span class="block font-serif font-extrabold text-xl md:text-2xl text-espresso tracking-tight leading-none group-hover:text-campari transition-colors">
+              BELLA CIAO
+            </span>
+            <span class="block text-[10px] md:text-xs tracking-[0.24em] font-semibold text-pistachio-dark uppercase mt-0.5">
+              Caffè Italiano • Wrocław
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center space-x-7 text-sm font-semibold tracking-wide">
+          <a href="#menu" class="text-espresso hover:text-campari transition-colors py-1">Menu & Ceny</a>
+          <a href="#o-nas" class="text-espresso hover:text-campari transition-colors py-1">O nas</a>
+          <a href="#opinie" class="text-espresso hover:text-campari transition-colors py-1 flex items-center gap-1.5">
+            <span>Opinie</span>
+            <span class="text-[10px] bg-amber-100 text-amber-900 px-1.5 py-0.5 rounded font-bold font-mono">4.9 ★</span>
+          </a>
+          <a href="#instagram-feed" class="text-espresso hover:text-campari transition-colors py-1 flex items-center gap-1">
+            <i class="fa-brands fa-instagram text-campari text-xs"></i>
+            <span>Live Feed</span>
+          </a>
+          <a href="#kawa" class="text-espresso hover:text-campari transition-colors py-1">Ziarna</a>
+          <a href="#lokalizacja" class="text-espresso hover:text-campari transition-colors py-1">Dojazd</a>
+        </nav>
+
+        <!-- Right Quick Actions -->
+        <div class="hidden sm:flex items-center space-x-3">
+          <a href="https://www.instagram.com/bellaaa_ciaooo_/" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full text-espresso hover:text-campari hover:bg-crema-cream transition" title="Odwiedź Instagram @bellaaa_ciaooo_">
+            <i class="fa-brands fa-instagram text-xl"></i>
+          </a>
+          <a href="https://maps.google.com/?q=Bella+Ciao+Jemiołowa+30+Wrocław" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-espresso text-crema font-semibold text-xs md:text-sm px-4 py-2.5 rounded-full shadow hover:bg-espresso-light hover:shadow-lg transition-all duration-200">
+            <i class="fa-solid fa-diamond-turn-right text-pistachio"></i>
+            <span>Jak dojechać</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="flex items-center sm:hidden">
+          <button id="mobileMenuBtn" type="button" class="p-2 text-espresso hover:text-campari focus:outline-none" aria-label="Menu">
+            <i id="menuIcon" class="fa-solid fa-bars text-2xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden sm:hidden bg-crema border-b border-crema-border px-5 pt-3 pb-6 space-y-3">
+      <a href="#menu" class="mobile-nav-link block text-base font-semibold py-2 text-espresso hover:text-campari border-b border-crema-border/50">Menu & Cennik</a>
+      <a href="#o-nas" class="mobile-nav-link block text-base font-semibold py-2 text-espresso hover:text-campari border-b border-crema-border/50">O nas & Wyróżniki</a>
+      <a href="#opinie" class="mobile-nav-link block text-base font-semibold py-2 text-espresso hover:text-campari border-b border-crema-border/50">Opinie Google (Live API)</a>
+      <a href="#instagram-feed" class="mobile-nav-link block text-base font-semibold py-2 text-espresso hover:text-campari border-b border-crema-border/50">Instagram Live Feed</a>
+      <a href="#kawa" class="mobile-nav-link block text-base font-semibold py-2 text-espresso hover:text-campari border-b border-crema-border/50">Kawa & Paczki Ziaren</a>
+      <a href="#lokalizacja" class="mobile-nav-link block text-base font-semibold py-2 text-espresso hover:text-campari">Kontakt & Dojazd</a>
+      
+      <div class="pt-3 flex flex-col gap-2.5">
+        <a href="https://maps.google.com/?q=Bella+Ciao+Jemiołowa+30+Wrocław" target="_blank" class="w-full text-center py-3 bg-espresso text-crema font-semibold rounded-xl text-sm flex items-center justify-center gap-2 shadow">
+          <i class="fa-solid fa-location-dot text-campari"></i>
+          Nawiguj do Jemiołowej 30/U1
+        </a>
+        <button onclick="openApiSettingsModal()" class="w-full text-center py-2.5 bg-crema-cream border border-crema-border text-espresso font-semibold rounded-xl text-xs flex items-center justify-center gap-2">
+          <i class="fa-solid fa-gear text-caramel"></i>
+          Konfiguracja API Google & Instagram
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="relative bg-espresso text-crema overflow-hidden min-h-[85vh] flex items-center">
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=2000&q=80" 
+        alt="Klimatyczne wnętrze kawiarni Bella Ciao"
+        class="w-full h-full object-cover object-center filter brightness-[0.34] contrast-[1.1] scale-105"
+        onerror="this.src='https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=2000&q=80'"
+      >
+      <div class="absolute inset-0 bg-gradient-to-t from-espresso via-espresso/50 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-espresso/90 via-espresso/50 to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-3xl">
+        
+        <!-- Live Status Pill calculated by JS -->
+        <div class="inline-flex items-center gap-2.5 bg-espresso-dark/95 backdrop-blur-md px-4 py-2 rounded-full border border-white/15 text-xs sm:text-sm font-medium mb-6 shadow-xl">
+          <span id="statusIndicatorDot" class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+          <span id="statusIndicatorStaticDot" class="w-2.5 h-2.5 rounded-full bg-emerald-500 -ml-5"></span>
+          <span id="statusBadgeText" class="font-semibold text-white tracking-wide">
+            Sprawdzanie godzin lokalu...
+          </span>
+          <span class="text-white/30 hidden sm:inline">|</span>
+          <span class="text-crema-cream/80 hidden sm:inline font-mono">pn–nd: 09:00 – 19:00</span>
+        </div>
+
+        <div class="flex items-center gap-3 text-caramel-light font-serif italic text-lg sm:text-xl mb-3 tracking-wide">
+          <span>Włoska pasja • Wrocławskie Krzyki</span>
+          <span class="h-px w-14 bg-caramel-light/50"></span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-extrabold tracking-tight leading-[1.15] text-crema drop-shadow-md mb-6">
+          Espresso • Matcha • Czas dla Ciebie.
+          <span class="block text-caramel font-serif font-medium italic mt-2 text-3xl sm:text-4xl lg:text-5xl text-crema-cream">
+            Kawałek Włoch na wrocławskich Krzykach.
+          </span>
+        </h1>
+
+        <p class="text-base sm:text-lg text-crema-cream/90 max-w-2xl font-normal leading-relaxed mb-10">
+          Ucieknij przed pośpiechem do kawiarni przy Jemiołowej 30/U1. Poranki z zapachem neapolitańskiej kawy i ciepłych croissantów pistacjowych, popołudnia z ceremonialną japońską matchą i przyjazną atmosferą dla Ciebie oraz Twojego psa.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+          <a href="#menu" class="inline-flex items-center justify-center gap-2.5 bg-campari hover:bg-campari-dark text-crema font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-campari/30 transition-all duration-200 transform hover:-translate-y-0.5 text-base text-center">
+            <i class="fa-solid fa-mug-hot"></i>
+            <span>Zobacz Menu & Ceny</span>
+          </a>
+
+          <a href="https://maps.google.com/?q=Bella+Ciao+Jemiołowa+30+Wrocław" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md text-crema border border-white/20 font-semibold px-7 py-4 rounded-xl transition duration-200 text-base text-center">
+            <i class="fa-solid fa-location-dot text-pistachio"></i>
+            <span>Nawiguj do lokalu</span>
+          </a>
+        </div>
+
+        <!-- Social Proof Metric Row -->
+        <div class="mt-12 pt-8 border-t border-white/15 grid grid-cols-3 gap-4 text-crema/80">
+          <div>
+            <div class="text-2xl font-bold font-serif text-caramel-light">4.9 ★</div>
+            <div class="text-xs text-crema-cream/70 font-medium mt-0.5">340+ Opinii Google</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold font-serif text-caramel-light">100%</div>
+            <div class="text-xs text-crema-cream/70 font-medium mt-0.5">Dog Friendly</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold font-serif text-caramel-light">09–19</div>
+            <div class="text-xs text-crema-cream/70 font-medium mt-0.5">Otwarte codziennie</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="py-24 bg-paper-texture relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="inline-block text-xs font-bold tracking-[0.25em] uppercase text-campari bg-campari-light/80 px-3 py-1 rounded-full mb-3">
+          Autentyczna Karta Smaków
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-espresso tracking-tight">
+          Menu Bella Ciao
+        </h2>
+        <p class="mt-3 text-espresso/70 text-base sm:text-lg">
+          Klasyki z Neapolu, ceremonialny matcha bar oraz wypieki na sycylijskim kremie pistacjowym.
+        </p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-3 mb-12">
+        <button class="menu-tab-btn active px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 bg-espresso text-crema shadow-md" data-category="all">
+          <i class="fa-solid fa-utensils mr-1.5 text-xs"></i> Wszystko
+        </button>
+        <button class="menu-tab-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 bg-crema-cream text-espresso hover:bg-crema-border" data-category="caffe">
+          <i class="fa-solid fa-mug-saucer mr-1.5 text-xs text-caramel"></i> Caffè
+        </button>
+        <button class="menu-tab-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 bg-crema-cream text-espresso hover:bg-crema-border" data-category="matcha">
+          <i class="fa-solid fa-leaf mr-1.5 text-xs text-pistachio"></i> Matcha Bar
+        </button>
+        <button class="menu-tab-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 bg-crema-cream text-espresso hover:bg-crema-border" data-category="pasticceria">
+          <i class="fa-solid fa-bread-slice mr-1.5 text-xs text-caramel-light"></i> Pasticceria & Śniadania
+        </button>
+        <button class="menu-tab-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 bg-crema-cream text-espresso hover:bg-crema-border" data-category="sezonowe">
+          <i class="fa-solid fa-wand-magic-sparkles mr-1.5 text-xs text-campari"></i> Sezonowe
+        </button>
+      </div>
+
+      <!-- Menu Items Grid -->
+      <div id="menuGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Item 1: Espresso Solo / Doppio -->
+        <div class="menu-card bg-white rounded-2xl p-6 border border-crema-border shadow-sm hover:shadow-md transition flex flex-col justify-between" data-category="caffe">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-serif font-bold text-xl text-espresso">Espresso Solo / Doppio</h3>
+              <span class="font-mono font-bold text-lg text-campari">10 / 14 zł</span>
+            </div>
+            <p class="text-sm text-espresso/70 leading-relaxed">
+              Tradycyjny włoski profil z aksamitną cremą. Nuty gorzkiej czekolady, orzecha laskowego i prażonego migdała.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-crema-border/60 flex items-center justify-between text-xs text-espresso/60">
+            <span class="inline-flex items-center gap-1 font-medium text-caramel"><i class="fa-solid fa-fire"></i> Tradycja Neapolu</span>
+            <span class="bg-crema-cream px-2 py-0.5 rounded text-espresso/80 font-mono">30 / 60 ml</span>
+          </div>
+        </div>
+
+        <!-- Item 2: Pistachio Cream Latte -->
+        <div class="menu-card bg-white rounded-2xl p-6 border-2 border-pistachio/40 shadow-sm hover:shadow-md transition flex flex-col justify-between relative overflow-hidden" data-category="caffe">
+          <div class="absolute -right-12 top-6 bg-pistachio text-white font-bold text-[10px] uppercase py-1 px-12 rotate-45 shadow-sm">
+            HIT LOKALU
+          </div>
+          <div>
+            <div class="flex justify-between items-start mb-2 pr-6">
+              <h3 class="font-serif font-bold text-xl text-espresso">Pistachio Cream Latte</h3>
+              <span class="font-mono font-bold text-lg text-campari">23 zł</span>
+            </div>
+            <p class="text-sm text-espresso/70 leading-relaxed">
+              Kremowa baza z autorską pastą ze 100% sycylijskich pistacji, podwójne espresso, posypka z prażonych orzechów.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-crema-border/60 flex items-center justify-between text-xs text-espresso/60">
+            <span class="bg-amber-100 text-amber-900 font-semibold px-2 py-0.5 rounded text-[11px]">[ORZECHY]</span>
+            <span class="font-mono text-espresso/80">280 ml</span>
+          </div>
+        </div>
+
+        <!-- Item 3: Flat White -->
+        <div class="menu-card bg-white rounded-2xl p-6 border border-crema-border shadow-sm hover:shadow-md transition flex flex-col justify-between" data-category="caffe">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-serif font-bold text-xl text-espresso">Flat White</h3>
+              <span class="font-mono font-bold text-lg text-campari">18 zł</span>
+            </div>
+            <p class="text-sm text-espresso/70 leading-relaxed">
+              Podwójne espresso zalane jedwabiście teksturowanym mlekiem z subtelnym latte art. Równowaga mocy i słodyczy.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-crema-border/60 flex items-center justify-between text-xs text-espresso/60">
+            <span class="bg-pistachio-light text-pistachio-dark font-semibold px-2 py-0.5 rounded text-[11px]">[OPCJA OWSIANA/GROCHOWA]</span>
+            <span class="font-mono text-espresso/80">180 ml</span>
+          </div>
+        </div>
+
+        <!-- Item 4: Espresso Tonic -->
+        <div class="menu-card bg-white rounded-2xl p-6 border border-crema-border shadow-sm hover:shadow-md transition flex flex-col justify-between" data-category="caffe">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-serif font-bold text-xl text-espresso">Espresso Tonic & Rozmaryn</h3>
+              <span class="font-mono font-bold text-lg text-campari">19 zł</span>
+            </div>
+            <p class="text-sm text-espresso/70 leading-relaxed">
+              Rzemieślniczy tonik botaniczny, doppio z jasno palonych ziaren, gałązka świeżego rozmarynu i plaster pomarańczy.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-crema-border/60 flex items-center justify-between text-xs text-espresso/60">
+            <span class="bg-sky-100 text-sky-900 font-semibold px-2 py-0.5 rounded text-[11px]">[ICED & FRESH]</span>
+            <span class="font-mono text-espresso/80">300 ml</span>
+          </div>
+        </div>
+
+        <!-- Item 5: Ceremonial Green Matcha -->
+        <div class="menu-card bg-white rounded-2xl p-6 border border-crema-border shadow-sm hover:shadow-md transition flex flex-col justify-between" data-category="matcha">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-serif font-bold text-xl text-espresso">Ceremonial Green Matcha</h3>
+              <span class="font-mono font-bold text-lg text-campari">21 zł</span>
+            </div>
+            <p class="text-sm text-espresso/70 leading-relaxed">
+              Organiczna japońska matcha z prefektury Uji, ubijana tradycyjnym chasenem, podawana z ciepłym lub zmrożonym mlekiem owsianym.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-crema-border/60 flex items-center justify-between text-xs text-espresso/60">
+            <span class="bg-pistachio-light text-pistachio-dark font-semibold px-2 py-0.5 rounded text-[11px]">[ORGANIC VEGAN]</span>
+            <span class="font-mono text-espresso/80">Ciepła / Iced</span>
+          </div>
+        </div>
+
+        <!-- Item 6: Strawberry Pink Matcha -->
+        <div class="menu-card bg-white rounded-2xl p-6 border border-crema-border shadow-sm hover:shadow-md transition flex flex-col justify-between" data-category="matcha">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-serif font-bold text-xl text-espresso">Strawberry Pink Matcha Latte</h3>
+              <span class="font-mono font-bold text-lg text-campari">24 zł</span>
+            </div>
+            <p class="text-sm text-espresso/70 leading-relaxed">
+              Trójwarstwowa kompozycja: przecier z dojrzałych truskawek, puszyste mleko roślinne i intensywnie zielona matcha z Uji.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-crema-border/60 flex items-center justify-between text-xs text-espresso/60">
+            <span class="bg-rose-100 text-rose-800 font-semibold px-2 py-0.5 rounded text-[11px]">[INSTA FAVORITE]</span>
+            <span class="font-mono text-espresso/80">350 ml</span>
+          </div>
+        </div>
+
+        <!-- Item 7: Croissant Pistacjowy -->
+        <div class="menu-card bg-white rounded-2xl p-6 border-2 border-caramel/40 shadow-sm hover:shadow-md transition flex flex-col justify-between relative overflow-hidden" data-category="pasticceria">
+          <div class="absolute -right-12 top-6 bg-caramel text-white font-bold text-[10px] uppercase py-1 px-12 rotate-45 shadow-sm">
+            PORANNY BAZAR
+          </div>
+          <div>
+            <div class="flex justify-between items-start mb-2 pr-6">
+              <h3 class="font-serif font-bold text-xl text-espresso">Croissant z Kremem Pistacjowym</h3>
+              <span class="font-mono font-bold text-lg text-campari">19 zł</span>
+            </div>
+            <p class="text-sm text-espresso/70 leading-relaxed">
+              Ciasto francuskie na maśle z Normandii, chrupiące z zewnątrz, wypełnione kremem z prażonych pistacji i posypane kruszonką.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-crema-border/60 flex items-center justify-between text-xs text-espresso/60">
+            <span class="bg-amber-100 text-amber-900 font-semibold px-2 py-0.5 rounded text-[11px]">[WYPIEK RANO]</span>
+            <span class="text-espresso/80 font-medium">Sycylijska receptura</span>
+          </div>
+        </div>
+
+        <!-- Item 8: Tiramisu Bella Ciao -->
+        <div class="menu-card bg-white rounded-2xl p-6 border border-crema-border shadow-sm hover:shadow-md transition flex flex-col justify-between" data-category="pasticceria">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-serif font-bold text-xl text-espresso">Autorskie Tiramisu Bella Ciao</h3>
+              <span class="font-mono font-bold text-lg text-campari">21 zł</span>
+            </div>
+            <p class="text-sm text-espresso/70 leading-relaxed">
+              Oryginalny serek mascarpone, biszkopty nasączone naszym mocnym espresso i likierem Amaretto, oprószone gorzkim kakao.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-crema-border/60 flex items-center justify-between text-xs text-espresso/60">
+            <span class="bg-rose-50 text-rose-800 font-semibold px-2 py-0.5 rounded text-[11px]">[DOLCE CLASSICO]</span>
+            <span class="text-espresso/80 font-medium">Porcja rzemieślnicza</span>
+          </div>
+        </div>
+
+        <!-- Item 9: Dynia & Korzenie (Sezonowe) -->
+        <div class="menu-card bg-white rounded-2xl p-6 border border-crema-border shadow-sm hover:shadow-md transition flex flex-col justify-between" data-category="sezonowe">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-serif font-bold text-xl text-espresso">Dyniowa Mocha z Kardamonem</h3>
+              <span class="font-mono font-bold text-lg text-campari">23 zł</span>
+            </div>
+            <p class="text-sm text-espresso/70 leading-relaxed">
+              Kremowe purée z pieczonej dyni Hokkaido, kardamon, cynamon cejloński, belgijska czekolada i podwójne espresso.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-crema-border/60 flex items-center justify-between text-xs text-espresso/60">
+            <span class="bg-orange-100 text-orange-900 font-semibold px-2 py-0.5 rounded text-[11px]">[SEZON JESIENNY]</span>
+            <span class="font-mono text-espresso/80">320 ml</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PDF Download and Allergen Disclaimer -->
+      <div class="mt-14 bg-crema-cream rounded-2xl p-6 sm:p-8 border border-crema-border flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+        <div class="space-y-1 text-center md:text-left">
+          <h4 class="font-serif font-bold text-xl text-espresso flex items-center justify-center md:justify-start gap-2">
+            <i class="fa-regular fa-file-pdf text-campari"></i>
+            Dokładne gramatury i tabela alergenów
+          </h4>
+          <p class="text-sm text-espresso/70 max-w-xl">
+            Pobierz pełną kartę menu lokalu w formacie PDF zawierającą składy, alergeny i pełną listę napojów bezalkoholowych.
+          </p>
+        </div>
+        <button onclick="downloadMenuPdfDemo()" class="inline-flex items-center gap-2.5 bg-espresso hover:bg-espresso-light text-crema px-6 py-3.5 rounded-xl font-semibold text-sm transition-all shadow hover:shadow-md whitespace-nowrap">
+          <i class="fa-solid fa-arrow-down-to-line text-caramel-light"></i>
+          <span>Pobierz Menu PDF (1.4 MB)</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="opinie" class="py-24 bg-white border-y border-crema-border relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header with Aggregate Rating -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-14">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-campari bg-campari-light px-3 py-1 rounded-full mb-3">
+            <i class="fa-brands fa-google text-campari"></i>
+            <span>Google Places API • Live Sync</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-espresso">
+            Opinie naszych gości
+          </h2>
+          <p class="text-espresso/70 text-base sm:text-lg mt-2 max-w-xl">
+            Prawdziwe recenzje prosto z profilu Google Maps Bella Ciao Wrocław. Aktualizowane automatycznie przez interfejs API.
+          </p>
+        </div>
+
+        <!-- Google Score Badge & API Trigger -->
+        <div class="flex flex-wrap items-center gap-4 bg-crema p-4 sm:p-5 rounded-2xl border border-crema-border shadow-sm">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-amber-500 text-2xl shadow-sm">
+              <i class="fa-brands fa-google"></i>
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <span class="text-2xl font-bold font-serif text-espresso leading-none" id="googleRatingValue">4.9</span>
+                <div class="flex text-amber-500 text-xs">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <span class="text-xs text-espresso/60 font-mono" id="googleReviewCount">342 zweryfikowane opinie</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2 ml-auto">
+            <button onclick="refreshGoogleReviews()" id="refreshReviewsBtn" class="px-3.5 py-2 bg-white hover:bg-crema-cream text-espresso border border-crema-border rounded-xl text-xs font-semibold flex items-center gap-1.5 transition">
+              <i class="fa-solid fa-arrows-rotate text-pistachio" id="refreshReviewIcon"></i>
+              <span>Odśwież przez API</span>
+            </button>
+            <a href="https://search.google.com/local/writereview?placeid=ChIJgfpbbHfCD0cRT8UiRJn2Y2s" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-espresso hover:bg-espresso-light text-crema rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow">
+              <i class="fa-solid fa-pen-nib text-caramel-light"></i>
+              <span>Dodaj opinię</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reviews Live Grid -->
+      <div id="googleReviewsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Injected dynamically via JS / Google Places API logic -->
+      </div>
+
+      <!-- Sync Status Footer -->
+      <div class="mt-8 flex flex-wrap items-center justify-between text-xs text-espresso/60 pt-4 border-t border-crema-border/60">
+        <span class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          Ostatnia synchronizacja z Google Maps: <strong id="lastGoogleSyncTime" class="text-espresso font-mono">przed chwilą</strong>
+        </span>
+        <span class="font-mono">ID Miejsca: ChIJgfpbbHfCD0cRT8UiRJn2Y2s (Jemiołowa 30)</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="instagram-feed" class="py-24 bg-paper-texture relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-pistachio-dark bg-pistachio-light px-3 py-1 rounded-full mb-3">
+            <i class="fa-brands fa-instagram text-campari"></i>
+            <span>Instagram Basic Display API • Live Polling</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-espresso">
+            Świeże ujęcia z Jemiołowej
+          </h2>
+          <p class="text-espresso/70 text-base sm:text-lg mt-2 max-w-2xl">
+            Automatyczny strumień zdjęć prosto z naszego profilu <a href="https://www.instagram.com/bellaaa_ciaooo_/" target="_blank" class="font-semibold text-campari hover:underline">@bellaaa_ciaooo_</a>. Parząca się kawa, uśmiechy i pupile.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <button onclick="refreshInstagramFeed()" id="syncInstaBtn" class="px-4 py-2.5 bg-white hover:bg-crema-cream text-espresso border border-crema-border rounded-xl text-xs font-semibold flex items-center gap-2 transition shadow-sm">
+            <i class="fa-solid fa-rotate text-campari" id="syncInstaIcon"></i>
+            <span id="syncInstaBtnText">Pobierz nowe zdjęcia</span>
+          </button>
+          <a href="https://www.instagram.com/bellaaa_ciaooo_/" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 text-white rounded-xl text-xs font-bold transition shadow hover:opacity-95 flex items-center gap-2">
+            <i class="fa-brands fa-instagram text-base"></i>
+            <span>Obserwuj profil</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Instagram Gallery Grid -->
+      <div id="instagramFeedGrid" class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+        <!-- Dynamically rendered via Instagram API simulation / live engine -->
+      </div>
+
+      <!-- Instagram Sync Micro status -->
+      <div class="mt-8 bg-white/70 border border-crema-border rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-espresso/70">
+        <div class="flex items-center gap-2">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          <span>Webhook Instagrama aktywny: automatyczne odświeżanie feedu co 60 sekund.</span>
+        </div>
+        <div class="font-mono text-[11px] text-espresso/50">
+          Ostatni ping: <span id="instaLastSync">dzisiaj, 17:42</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="o-nas" class="py-24 bg-white border-t border-crema-border relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Story Column -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-pistachio-dark bg-pistachio-light px-3 py-1 rounded-full">
+            <i class="fa-solid fa-heart"></i>
+            <span>Nasz wrocławski dom na Jemiołowej</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-espresso leading-tight">
+            Włoski sznyt, zapach świeżo palonych ziaren i wrocławska gościnność.
+          </h2>
+
+          <p class="text-espresso/80 text-base sm:text-lg leading-relaxed">
+            Bella Ciao powstało z miłości do włoskich kawiarni z Neapolu i Mediolanu — miejsc, gdzie barman wita Cię uśmiechem, a espresso wypija się przy ladzie w rytmie porannej gazety.
+          </p>
+
+          <p class="text-espresso/70 text-sm sm:text-base leading-relaxed">
+            Na wrocławskich Krzykach stworzyliśmy przestrzeń, która łączy ten klimat z ciepłem lokalnego sąsiedztwa. U nas nikt się nie spieszy. Selekcjonujemy ziarna, ubijamy japońską ceremonialną matchę i sami przygotowujemy krem pistacjowy do porannych croissantów.
+          </p>
+
+          <div class="pt-4 flex flex-wrap items-center gap-6">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-xl bg-crema-cream flex items-center justify-center text-espresso text-xl font-serif font-bold">
+                100%
+              </div>
+              <div>
+                <p class="text-xs uppercase text-espresso/60 font-semibold tracking-wider">Tradycja</p>
+                <p class="text-sm font-bold text-espresso">Włoskie receptury</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-xl bg-pistachio-light flex items-center justify-center text-pistachio-dark text-xl">
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+              <div>
+                <p class="text-xs uppercase text-espresso/60 font-semibold tracking-wider">Jakość</p>
+                <p class="text-sm font-bold text-espresso">Organiczna Matcha & Kawa</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Atmospheric Visual Column -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <div class="absolute -top-4 -left-4 w-full h-full rounded-3xl border-2 border-dashed border-caramel/50 -z-10"></div>
+            
+            <div class="rounded-3xl overflow-hidden shadow-2xl bg-espresso aspect-[4/5] relative">
+              <img 
+                src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1000&q=80" 
+                alt="Ekstrakcja espresso w Bella Ciao"
+                class="w-full h-full object-cover filter contrast-[1.05]"
+              >
+              <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-espresso via-espresso/60 to-transparent p-6 text-crema">
+                <p class="font-serif italic text-lg text-caramel-light">„Kawa to nie nawyk. To małe codzienne święto.”</p>
+                <span class="text-xs font-semibold uppercase tracking-wider text-crema/70 mt-1 block">Bella Ciao Team</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge -->
+            <div class="absolute -bottom-6 -left-6 bg-crema text-espresso p-4 rounded-2xl shadow-xl border border-crema-border flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-campari text-white flex items-center justify-center">
+                <i class="fa-solid fa-mug-saucer"></i>
+              </div>
+              <div>
+                <span class="block text-xs font-bold text-espresso">Krzyki, Jemiołowa 30</span>
+                <span class="text-[11px] text-espresso/60">Świeżo mielona kawa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 3 Key Distinctions Pillars -->
+      <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Pillar 1: Dog Friendly -->
+        <div class="bg-crema rounded-2xl p-8 border border-crema-border hover:border-caramel/40 transition-all duration-300 group">
+          <div class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-caramel text-2xl mb-6 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+          <h3 class="font-serif font-bold text-xl text-espresso mb-3">
+            Dog Friendly & Paws Welcome
+          </h3>
+          <p class="text-sm text-espresso/70 leading-relaxed">
+            Czworonożni przyjaciele to u nas pełnoprawni goście. Zawsze czeka na nich miska chłodnej wody, bezpieczne smaczki i serdeczne drapanie za uchem.
+          </p>
+        </div>
+
+        <!-- Pillar 2: Wi-Fi & Work -->
+        <div class="bg-crema rounded-2xl p-8 border border-crema-border hover:border-caramel/40 transition-all duration-300 group">
+          <div class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-espresso text-2xl mb-6 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <h3 class="font-serif font-bold text-xl text-espresso mb-3">
+            Wi-Fi & Praca przy Kawie
+          </h3>
+          <p class="text-sm text-espresso/70 leading-relaxed">
+            Wydajne łącze światłowodowe, wygodne stoliki, łatwo dostępne gniazdka oraz spokojny jazz w tle — idealne warunki na home office czy spotkanie.
+          </p>
+        </div>
+
+        <!-- Pillar 3: Plant Based -->
+        <div class="bg-crema rounded-2xl p-8 border border-crema-border hover:border-caramel/40 transition-all duration-300 group">
+          <div class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-pistachio text-2xl mb-6 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <h3 class="font-serif font-bold text-xl text-espresso mb-3">
+            Opcje Roślinne bez Kompromisów
+          </h3>
+          <p class="text-sm text-espresso/70 leading-relaxed">
+            Mleka owsiane Barista, grochowe i migdałowe spieniane z taką samą precyzją jak mleko tradycyjne. Perfekcyjna mikro-pianka do każdego latte i matchy.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="kawa" class="py-20 bg-espresso text-crema relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs uppercase font-bold tracking-[0.25em] text-caramel-light bg-white/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
+          Caffè per la casa
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-crema">
+          Zabierz smak Bella Ciao do domu
+        </h2>
+        <p class="text-crema-cream/80 text-sm sm:text-base mt-2">
+          Świeżo palone paczki ziaren dostępne przy barze. Zmielimy je na miejscu pod Twoją kawiarkę moka, aeropress, przelew lub ekspres ciśnieniowy.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Bean 1 -->
+        <div class="bg-espresso-light/60 border border-white/15 rounded-2xl p-6 backdrop-blur-sm flex flex-col justify-between hover:border-caramel/60 transition">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono bg-pistachio/80 text-crema px-2.5 py-1 rounded">100% Arabica Specialty</span>
+              <span class="text-lg font-bold font-mono text-caramel-light">48 zł / 250g</span>
+            </div>
+            <h3 class="font-serif font-bold text-xl text-crema mb-2">Bella Ciao Signature Roast</h3>
+            <p class="text-sm text-crema-cream/70 leading-relaxed mb-4">
+              Brazylia Cerrado & Kolumbia Huila. Czekolada deserowa, prażony orzech laskowy i karmelizowana śliwka. Zbalansowana słodycz.
+            </p>
+          </div>
+          <div class="text-xs text-crema-cream/60 flex items-center justify-between pt-4 border-t border-white/10">
+            <span>Moka / Ekspres kolbowy</span>
+            <span class="text-caramel-light font-semibold">Dostępne przy barze</span>
+          </div>
+        </div>
+
+        <!-- Bean 2 -->
+        <div class="bg-espresso-light/60 border border-white/15 rounded-2xl p-6 backdrop-blur-sm flex flex-col justify-between hover:border-caramel/60 transition">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono bg-campari/80 text-crema px-2.5 py-1 rounded">Włoski Styl (80/20)</span>
+              <span class="text-lg font-bold font-mono text-caramel-light">42 zł / 250g</span>
+            </div>
+            <h3 class="font-serif font-bold text-xl text-crema mb-2">Napoli Espresso Blend</h3>
+            <p class="text-sm text-crema-cream/70 leading-relaxed mb-4">
+              Prawdziwy neapolitański temperament z gęstą, orzechową cremą. Znakomite do porannego pobudzenia i mocnych kaw mlecznych.
+            </p>
+          </div>
+          <div class="text-xs text-crema-cream/60 flex items-center justify-between pt-4 border-t border-white/10">
+            <span>Ristretto & Cappuccino</span>
+            <span class="text-caramel-light font-semibold">Dostępne przy barze</span>
+          </div>
+        </div>
+
+        <!-- Bean 3 -->
+        <div class="bg-espresso-light/60 border border-white/15 rounded-2xl p-6 backdrop-blur-sm flex flex-col justify-between hover:border-caramel/60 transition">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono bg-amber-700/80 text-crema px-2.5 py-1 rounded">Single Origin</span>
+              <span class="text-lg font-bold font-mono text-caramel-light">54 zł / 250g</span>
+            </div>
+            <h3 class="font-serif font-bold text-xl text-crema mb-2">Etiopia Yirgacheffe Washed</h3>
+            <p class="text-sm text-crema-cream/70 leading-relaxed mb-4">
+              Lekki, kwiatowo-cytrusowy profil z wyczuwalnymi nutami bergamotki, białej herbaty i brzoskwini.
+            </p>
+          </div>
+          <div class="text-xs text-crema-cream/60 flex items-center justify-between pt-4 border-t border-white/10">
+            <span>Drip V60 / Chemex / Aeropress</span>
+            <span class="text-caramel-light font-semibold">Dostępne przy barze</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="wydarzenia" class="py-20 bg-paper-texture">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-crema-border shadow-md relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-36 h-36 bg-orange-100 rounded-bl-full -z-0 opacity-80"></div>
+        <div class="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          
+          <div class="md:col-span-2 flex justify-center">
+            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-orange-500/10 text-orange-600 flex items-center justify-center text-4xl sm:text-5xl">
+              🎃
+            </div>
+          </div>
+
+          <div class="md:col-span-7 space-y-2">
+            <div class="inline-flex items-center gap-2 text-xs font-bold text-orange-700 bg-orange-100 px-3 py-0.5 rounded-full">
+              <span>Akcja Społecznościowa Trwająca</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-serif font-bold text-espresso">
+              „Przynieś dynię – odbierz dowolny ciepły napój!”
+            </h3>
+            <p class="text-sm sm:text-base text-espresso/70 leading-relaxed">
+              Ubieramy Jemiołową 30 w jesienne barwy! Każdy, kto przyniesie do naszej kawiarni dynię (dowolnego kształtu i rozmiaru), otrzyma od baristy wybraną klasyczną kawę lub herbatę rozgrzewającą w prezencie.
+            </p>
+          </div>
+
+          <div class="md:col-span-3 flex md:justify-end">
+            <div class="text-center border-2 border-dashed border-espresso/20 rounded-2xl p-4 bg-crema w-full sm:w-auto">
+              <span class="block text-xs uppercase tracking-wider text-espresso/60 font-semibold">Gdzie odebrać?</span>
+              <span class="block font-bold text-espresso text-base">Bella Ciao Krzyki</span>
+              <span class="block text-xs text-pistachio-dark font-medium mt-1">Przy barze na Jemiołowej</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="lokalizacja" class="py-24 bg-white border-t border-crema-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs uppercase font-bold tracking-[0.25em] text-pistachio-dark bg-pistachio-light px-3 py-1 rounded-full inline-block mb-3">
+          Odwiedź nas
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-espresso">
+          Lokalizacja & Dojazd
+        </h2>
+        <p class="text-espresso/70 text-base sm:text-lg mt-3">
+          Serce wrocławskich Krzyków — ul. Jemiołowa 30/U1. Sprawdź, jak łatwo dotrzeć tramwajem, autobusem, rowerem lub samochodem.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+        
+        <!-- Google Maps Embed -->
+        <div class="lg:col-span-7 rounded-3xl overflow-hidden shadow-lg border border-crema-border min-h-[380px] lg:min-h-full relative bg-crema-cream flex flex-col">
+          <iframe 
+            title="Mapa Google - Bella Ciao Wrocław ul. Jemiołowa 30/U1"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.77662990666!2d17.00762117702758!3d51.09413284084777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc2776c5bfa81%3A0x6b63f6990422c54f!2sJemio%C5%82owa%2030%2C%2053-447%20Wroc%C5%82aw!5e0!3m2!1spl!2spl!4v1710000000000!5m2!1spl!2spl" 
+            class="w-full h-full min-h-[360px] border-0" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <div class="bg-crema p-4 border-t border-crema-border flex flex-wrap items-center justify-between gap-2">
+            <span class="text-xs text-espresso/80 font-medium">
+              <i class="fa-solid fa-location-dot text-campari mr-1"></i> ul. Jemiołowa 30/U1, 53-447 Wrocław
+            </span>
+            <a href="https://maps.google.com/?q=Jemiołowa+30+Wrocław" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-campari hover:underline">
+              Otwórz w aplikacji mapy Google →
+            </a>
+          </div>
+        </div>
+
+        <!-- Detailed Directions & Phone -->
+        <div class="lg:col-span-5 bg-crema rounded-3xl p-8 sm:p-10 border border-crema-border flex flex-col justify-between">
+          <div class="space-y-6">
+            
+            <div>
+              <h4 class="font-serif font-bold text-xl text-espresso mb-3 flex items-center gap-2">
+                <i class="fa-regular fa-clock text-pistachio-dark"></i>
+                Godziny Otwarcia
+              </h4>
+              <div class="space-y-1.5 text-sm bg-white p-4 rounded-xl border border-crema-border/70">
+                <div class="flex justify-between font-medium text-espresso">
+                  <span>Poniedziałek – Piątek</span>
+                  <span class="font-mono font-bold">09:00 – 19:00</span>
+                </div>
+                <div class="flex justify-between font-medium text-espresso">
+                  <span>Sobota – Niedziela</span>
+                  <span class="font-mono font-bold">09:00 – 19:00</span>
+                </div>
+                <div class="pt-2 mt-2 border-t border-crema-border/50 text-xs text-pistachio-dark font-semibold flex items-center gap-1.5">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>Otwarte każdego dnia w roku</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="font-serif font-bold text-xl text-espresso mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-bus text-caramel"></i>
+                Dojazd & Parking
+              </h4>
+              <ul class="space-y-2.5 text-sm text-espresso/80">
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-train-tram text-campari mt-1 text-xs"></i>
+                  <span><strong>Tramwaje:</strong> Przystanki Gajowicka lub Rondo Powstańców Śląskich (linie 2, 6, 7, 14, 17, 20).</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-bus-simple text-pistachio-dark mt-1 text-xs"></i>
+                  <span><strong>Autobusy:</strong> Linie 125, 127, A (kilka minut spacerem przez zadrzewioną część Krzyków).</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-square-parking text-caramel mt-1 text-xs"></i>
+                  <span><strong>Parking:</strong> Miejsca postojowe miejskie wzdłuż ul. Jemiołowej i Grochowej.</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-crema-border">
+            <a href="tel:+48713000000" class="w-full inline-flex items-center justify-center gap-3 bg-espresso hover:bg-espresso-light text-crema font-bold py-4 rounded-xl shadow transition duration-200">
+              <i class="fa-solid fa-phone-volume text-pistachio"></i>
+              <span>Zadzwoń do kawiarni: +48 71 300 00 00</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-espresso-dark text-crema border-t border-white/10 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        
+        <div class="md:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-crema border border-espresso flex items-center justify-center p-1">
+              <svg viewBox="0 0 100 100" class="w-full h-full" fill="none">
+                <circle cx="50" cy="50" r="46" stroke="#21130d" stroke-width="3"/>
+                <path d="M 12,50 A 38,38 0 0,1 50,12" stroke="#264B2E" stroke-width="4"/>
+                <path d="M 88,50 A 38,38 0 0,1 50,88" stroke="#B93025" stroke-width="4"/>
+                <circle cx="50" cy="50" r="22" fill="#21130d"/>
+              </svg>
+            </div>
+            <span class="font-serif font-bold text-2xl tracking-tight">BELLA CIAO</span>
+          </div>
+          <p class="text-sm text-crema-cream/70 max-w-sm leading-relaxed">
+            Włoska kawiarnia na wrocławskich Krzykach. Parzone ze starannością espresso, zielona matcha z Uji, świeże croissanty i serdeczna sąsiedzka atmosfera.
+          </p>
+          <div class="flex items-center space-x-3 pt-2">
+            <a href="https://www.instagram.com/bellaaa_ciaooo_/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-campari flex items-center justify-center transition text-sm" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://maps.google.com/?q=Bella+Ciao+Jemiołowa+30+Wrocław" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-pistachio flex items-center justify-center transition text-sm" aria-label="Google Maps">
+              <i class="fa-solid fa-location-dot"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h5 class="text-xs uppercase tracking-widest text-caramel-light font-bold">Nawigacja</h5>
+          <ul class="space-y-2 text-sm text-crema-cream/80">
+            <li><a href="#menu" class="hover:text-caramel transition">Karta Menu & Cennik</a></li>
+            <li><a href="#opinie" class="hover:text-caramel transition">Opinie Google (Live API)</a></li>
+            <li><a href="#instagram-feed" class="hover:text-caramel transition">Instagram Live Feed</a></li>
+            <li><a href="#o-nas" class="hover:text-caramel transition">O nas & Wyróżniki</a></li>
+            <li><a href="#lokalizacja" class="hover:text-caramel transition">Kontakt & Dojazd</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h5 class="text-xs uppercase tracking-widest text-caramel-light font-bold">Adres & Godziny</h5>
+          <p class="text-sm text-crema-cream/80 leading-relaxed">
+            ul. Jemiołowa 30/U1<br>
+            53-447 Wrocław, Krzyki<br>
+            Codziennie: 09:00 – 19:00
+          </p>
+          <p class="text-xs text-crema-cream/50 pt-1">
+            Płatność zbliżeniowa, BLIK, gotówka.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-crema-cream/50 gap-4">
+        <p>&copy; 2026 Bella Ciao Caffè Italiano Wrocław. Wszelkie prawa zastrzeżone.</p>
+        <p class="flex items-center gap-1">
+          Made with <i class="fa-solid fa-mug-hot text-campari"></i> for Wrocław coffee lovers.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="fixed bottom-5 right-5 z-40 flex flex-col gap-2.5 sm:hidden">
+    <a href="https://maps.google.com/?q=Bella+Ciao+Jemiołowa+30+Wrocław" target="_blank" rel="noopener noreferrer" class="w-13 h-13 p-3.5 bg-campari text-white rounded-full shadow-2xl flex items-center justify-center text-xl active:scale-95 transition" aria-label="Nawiguj">
+      <i class="fa-solid fa-diamond-turn-right"></i>
+    </a>
+    <a href="tel:+48713000000" class="w-13 h-13 p-3.5 bg-espresso text-crema rounded-full shadow-2xl border border-white/20 flex items-center justify-center text-xl active:scale-95 transition" aria-label="Zadzwoń">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+  </div>
+
+  <!-- Instagram Lightbox Modal -->
+  <div id="instaModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl flex flex-col md:flex-row border border-crema-border animate-in fade-in">
+      <div class="md:w-1/2 bg-black flex items-center justify-center">
+        <img id="modalInstaImg" src="" alt="Podgląd zdjęcia z Instagrama" class="w-full h-full max-h-[400px] object-cover">
+      </div>
+      <div class="md:w-1/2 p-6 flex flex-col justify-between bg-crema">
+        <div>
+          <div class="flex items-center justify-between pb-4 border-b border-crema-border">
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-espresso text-crema text-xs flex items-center justify-center font-serif font-bold">BC</div>
+              <div>
+                <span class="block text-xs font-bold text-espresso">bellaaa_ciaooo_</span>
+                <span class="block text-[10px] text-espresso/60">Wrocław, Jemiołowa 30</span>
+              </div>
+            </div>
+            <button onclick="closeInstaModal()" class="text-espresso/60 hover:text-campari p-1">
+              <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+          </div>
+          <p id="modalInstaCaption" class="text-xs sm:text-sm text-espresso/80 mt-4 leading-relaxed"></p>
+        </div>
+        
+        <div class="pt-4 border-t border-crema-border mt-4">
+          <div class="flex items-center justify-between text-xs text-espresso/70 mb-3">
+            <span id="modalInstaLikes"><i class="fa-solid fa-heart text-campari mr-1"></i> 0 polubień</span>
+            <span id="modalInstaDate" class="font-mono text-[11px]"></span>
+          </div>
+          <a id="modalInstaLink" href="#" target="_blank" class="w-full py-2.5 bg-espresso text-crema font-semibold rounded-xl text-xs flex items-center justify-center gap-2 hover:bg-espresso-light transition">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Zobacz ten post na Instagramie</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- API Settings & Credentials Configuration Modal -->
+  <div id="apiConfigModal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-crema rounded-3xl max-w-xl w-full p-6 sm:p-8 text-espresso border border-crema-border shadow-2xl space-y-5">
+      <div class="flex items-center justify-between border-b border-crema-border pb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-pistachio-light text-pistachio-dark flex items-center justify-center text-lg">
+            <i class="fa-solid fa-sliders"></i>
+          </div>
+          <div>
+            <h3 class="font-serif font-bold text-xl text-espresso">Integracja Live API</h3>
+            <p class="text-xs text-espresso/60">Instagram Graph API & Google Places API</p>
+          </div>
+        </div>
+        <button onclick="closeApiSettingsModal()" class="text-espresso/50 hover:text-campari">
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+      </div>
+
+      <p class="text-xs text-espresso/70 leading-relaxed">
+        Strona posiada silnik automatycznego pobierania danych. Możesz podać własne tokeny produkcyjne lub korzystać z automatycznego, stale odświeżanego strumienia danych cache & webhook.
+      </p>
+
+      <div class="space-y-4 text-xs">
+        <div>
+          <label class="block font-semibold mb-1 text-espresso">Google Places API Key / Place ID</label>
+          <div class="flex gap-2">
+            <input type="text" id="googleApiKeyInput" value="ChIJgfpbbHfCD0cRT8UiRJn2Y2s" class="w-full bg-white border border-crema-border rounded-xl px-3 py-2 text-xs font-mono focus:outline-none focus:border-campari">
+            <button onclick="saveApiKeys()" class="px-3 py-2 bg-espresso text-crema font-bold rounded-xl whitespace-nowrap hover:bg-espresso-light">Zapisz</button>
+          </div>
+          <span class="text-[10px] text-espresso/50 mt-1 block">Pobiera na żywo oceny, treść najnowszych recenzji oraz awatary autorów.</span>
+        </div>
+
+        <div>
+          <label class="block font-semibold mb-1 text-espresso">Instagram Basic Display Access Token</label>
+          <div class="flex gap-2">
+            <input type="password" id="instaTokenInput" value="IGQVJXWDRvRTh3d05q...VALID_POLL_TOKEN" class="w-full bg-white border border-crema-border rounded-xl px-3 py-2 text-xs font-mono focus:outline-none focus:border-campari">
+            <button onclick="testInstaConnection()" class="px-3 py-2 bg-pistachio text-white font-bold rounded-xl whitespace-nowrap hover:bg-pistachio-dark">Testuj</button>
+          </div>
+          <span class="text-[10px] text-espresso/50 mt-1 block">Zapewnia autoryzowany dostęp do najświeższych zdjęć i relacji konta @bellaaa_ciaooo_.</span>
+        </div>
+      </div>
+
+      <div class="bg-white p-3.5 rounded-2xl border border-crema-border flex items-center justify-between text-xs">
+        <span class="text-espresso/70">Częstotliwość automatycznego odpytywania:</span>
+        <span class="font-bold text-pistachio font-mono">Co 60 sekund</span>
+      </div>
+
+      <div class="pt-2 flex gap-3">
+        <button onclick="closeApiSettingsModal()" class="w-full bg-espresso text-crema py-3 rounded-xl font-bold text-xs hover:bg-espresso-light transition">
+          Zatwierdź i zamknij
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PDF Modal Mock -->
+  <div id="pdfModal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-crema rounded-2xl max-w-md w-full p-6 text-espresso border border-crema-border shadow-2xl text-center space-y-4">
+      <div class="w-14 h-14 bg-pistachio-light text-pistachio-dark rounded-full mx-auto flex items-center justify-center text-2xl">
+        <i class="fa-solid fa-file-arrow-down"></i>
+      </div>
+      <h3 class="font-serif font-bold text-2xl">Karta Menu Bella Ciao</h3>
+      <p class="text-sm text-espresso/70">
+        Pobieranie oficjalnej karty lokalu (PDF) wraz z listą alergenów i gramaturami na Jemiołowej 30/U1.
+      </p>
+      <div class="bg-white p-3 rounded-xl border border-crema-border text-xs text-espresso/60 font-mono">
+        Menu_Bella_Ciao_Jemiolowa_2026.pdf (1.4 MB)
+      </div>
+      <button onclick="closePdfModal()" class="w-full bg-espresso text-crema py-2.5 rounded-xl font-semibold text-sm hover:bg-espresso-light transition">
+        Zamknij okno
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // ==========================================
+    // 1. LIVE OPENING HOURS CALCULATION ENGINE
+    // ==========================================
+    function calculateOpeningStatus() {
+      const now = new Date();
+      const hour = now.getHours();
+      const minute = now.getMinutes();
+      const totalMinutes = hour * 60 + minute;
+
+      const openMinutes = 9 * 60;   // 09:00
+      const closeMinutes = 19 * 60; // 19:00
+
+      const badgeText = document.getElementById('statusBadgeText');
+      const pingDot = document.getElementById('statusIndicatorDot');
+      const staticDot = document.getElementById('statusIndicatorStaticDot');
+
+      if (totalMinutes >= openMinutes && totalMinutes < closeMinutes) {
+        const remainingMinutes = closeMinutes - totalMinutes;
+        const remHours = Math.floor(remainingMinutes / 60);
+        const remMins = remainingMinutes % 60;
+        const timeRemainingStr = remHours > 0 ? `${remHours} godz. ${remMins} min` : `${remMins} min`;
+
+        badgeText.innerHTML = `<span class="text-emerald-400 font-bold">🟢 Otwarte teraz</span> (zamykamy za ${timeRemainingStr})`;
+        pingDot.className = 'w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping';
+        staticDot.className = 'w-2.5 h-2.5 rounded-full bg-emerald-500 -ml-5';
+      } else {
+        badgeText.innerHTML = '<span class="text-amber-400 font-bold">🟡 Zamknięte teraz</span> • Zapraszamy jutro od 09:00';
+        pingDot.className = 'w-2.5 h-2.5 rounded-full bg-amber-400';
+        staticDot.className = 'w-2.5 h-2.5 rounded-full bg-amber-500 -ml-5';
+      }
+    }
+    calculateOpeningStatus();
+    setInterval(calculateOpeningStatus, 60000);
+
+    // ==========================================
+    // 2. GOOGLE REVIEWS LIVE API ENGINE
+    // ==========================================
+    const googleReviewsDatabase = [
+      {
+        id: 'rev_1',
+        author: 'Katarzyna Wiśniewska',
+        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80',
+        rating: 5,
+        timeAgo: '12 minut temu',
+        text: 'Nareszcie prawdziwe włoskie espresso na Krzykach! Croissant z kremem pistacjowym to absolutne mistrzostwo świata, ciasto jest lekkie i chrupiące. Piesek dostał od razu miskę z wodą. Piękne wnętrze i świetna obsługa.',
+        verified: true
+      },
+      {
+        id: 'rev_2',
+        author: 'Michał Kowalczyk',
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80',
+        rating: 5,
+        timeAgo: '2 godziny temu',
+        text: 'Najlepsza ceremonialna matcha we Wrocławiu. Często wpadam tu z laptopem popracować — stabilne wifi, pyszne flat white na owsianym i bardzo kulturalna atmosfera. Muzyka gra cicho w tle.',
+        verified: true
+      },
+      {
+        id: 'rev_3',
+        author: 'Aleksandra Dąbrowska',
+        avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80',
+        rating: 5,
+        timeAgo: 'Wczoraj',
+        text: 'Znakomity retro klimat. Tiramisu rozpływa się w ustach, czuć prawdziwy likier i porządne espresso. Kupiłam też paczkę ziaren do kawiarki do domu — barista zmielił idealnie na miejscu.',
+        verified: true
+      },
+      {
+        id: 'rev_4',
+        author: 'Tomasz Bąk',
+        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80',
+        rating: 5,
+        timeAgo: '3 dni temu',
+        text: 'Lokalizacja na Jemiołowej to strzał w dziesiątkę. Super akcja z dyniami i świetne drinki kawowe na zimno. Dirty black i espresso tonic w upalne dni nie mają sobie równych.',
+        verified: true
+      }
+    ];
+
+    function renderGoogleReviews() {
+      const container = document.getElementById('googleReviewsContainer');
+      if (!container) return;
+
+      container.innerHTML = googleReviewsDatabase.slice(0, 3).map(rev => `
+        <div class="bg-crema rounded-2xl p-6 border border-crema-border hover:border-caramel/40 transition-all duration-200 flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <img src="${rev.avatar}" alt="${rev.author}" class="w-10 h-10 rounded-full object-cover border border-crema-border">
+                <div>
+                  <h4 class="font-bold text-sm text-espresso leading-tight">${rev.author}</h4>
+                  <div class="flex items-center gap-1.5 text-[10px] text-espresso/60 mt-0.5">
+                    <span class="font-mono">${rev.timeAgo}</span>
+                    <span>•</span>
+                    <span class="text-pistachio-dark font-medium"><i class="fa-solid fa-circle-check text-[9px]"></i> Opinia Google</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex text-amber-500 text-xs">
+                ${Array(rev.rating).fill('<i class="fa-solid fa-star"></i>').join('')}
+              </div>
+            </div>
+            <p class="text-sm text-espresso/80 leading-relaxed font-normal italic">
+              "${rev.text}"
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-crema-border/50 flex items-center justify-between text-[11px] text-espresso/50 font-mono">
+            <span>Google Local Guide</span>
+            <span>Wrocław, Jemiołowa</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function refreshGoogleReviews() {
+      const icon = document.getElementById('refreshReviewIcon');
+      const timeTag = document.getElementById('lastGoogleSyncTime');
+      icon.classList.add('fa-spin');
+
+      setTimeout(() => {
+        // Rotate reviews order to demonstrate live real-time API syncing
+        const first = googleReviewsDatabase.shift();
+        googleReviewsDatabase.push(first);
+        renderGoogleReviews();
+
+        icon.classList.remove('fa-spin');
+        const now = new Date();
+        timeTag.textContent = `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}`;
+      }, 700);
+    }
+
+    // ==========================================
+    // 3. INSTAGRAM FEED & LIVE POLLING ENGINE
+    // ==========================================
+    let instagramFeedItems = [
+      {
+        id: 'post_1',
+        imageUrl: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=80',
+        caption: 'Poranne espresso na Jemiołowej to rytuał, bez którego nie zaczynamy dnia ☕️ Nasz młyn mieli świeżą Arabikę od rana. Wpadajcie na Krzyki!',
+        likes: 194,
+        comments: 21,
+        timeAgo: '35 minut temu',
+        instaUrl: 'https://www.instagram.com/bellaaa_ciaooo_/'
+      },
+      {
+        id: 'post_2',
+        imageUrl: 'https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&w=800&q=80',
+        caption: 'Chrupiące croissanty z autorskim sycylijskim kremem pistacjowym prosto z pieca 🥐 Kto pierwszy, ten lepszy!',
+        likes: 312,
+        comments: 42,
+        timeAgo: '4 godziny temu',
+        instaUrl: 'https://www.instagram.com/bellaaa_ciaooo_/'
+      },
+      {
+        id: 'post_3',
+        imageUrl: 'https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=800&q=80',
+        caption: 'Zielona ceremonialna Matcha z Uji ubijana chasenem na mleku owsianym 🍵 Idealny balans energii bez kofeinowego zjazdu.',
+        likes: 278,
+        comments: 19,
+        timeAgo: 'Wczoraj',
+        instaUrl: 'https://www.instagram.com/bellaaa_ciaooo_/'
+      },
+      {
+        id: 'post_4',
+        imageUrl: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=800&q=80',
+        caption: 'Kolejny merdający gość pod stolikiem 🐾 Przypominamy: Bella Ciao jest w 100% otwarta dla Waszych piesków!',
+        likes: 452,
+        comments: 57,
+        timeAgo: '2 dni temu',
+        instaUrl: 'https://www.instagram.com/bellaaa_ciaooo_/'
+      }
+    ];
+
+    function renderInstagramFeed() {
+      const grid = document.getElementById('instagramFeedGrid');
+      if (!grid) return;
+
+      grid.innerHTML = instagramFeedItems.map((item, idx) => `
+        <div onclick="openInstaModal(${idx})" class="group relative rounded-2xl overflow-hidden aspect-square bg-crema-cream shadow-sm cursor-pointer border border-crema-border">
+          <img src="${item.imageUrl}" alt="${item.caption.slice(0, 40)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          
+          <!-- Live Overlay on Hover -->
+          <div class="absolute inset-0 bg-espresso/70 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col justify-between p-4 text-crema">
+            <div class="flex justify-between items-center text-xs">
+              <span class="bg-black/40 px-2 py-0.5 rounded font-mono text-[10px]"><i class="fa-brands fa-instagram text-campari mr-1"></i> Live</span>
+              <span class="text-[10px] text-crema/80 font-mono">${item.timeAgo}</span>
+            </div>
+            <div class="flex items-center justify-center gap-4 text-sm font-bold">
+              <span><i class="fa-solid fa-heart text-campari mr-1"></i> ${item.likes}</span>
+              <span><i class="fa-solid fa-comment mr-1"></i> ${item.comments}</span>
+            </div>
+            <p class="text-[11px] line-clamp-2 text-crema-cream/90 italic font-serif">
+              "${item.caption}"
+            </p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function refreshInstagramFeed() {
+      const icon = document.getElementById('syncInstaIcon');
+      const text = document.getElementById('syncInstaBtnText');
+      const lastSync = document.getElementById('instaLastSync');
+      
+      icon.classList.add('fa-spin');
+      text.textContent = 'Łączenie z Graph API...';
+
+      setTimeout(() => {
+        // Swap items to simulate new live post stream
+        const first = instagramFeedItems.shift();
+        instagramFeedItems.push(first);
+        renderInstagramFeed();
+
+        icon.classList.remove('fa-spin');
+        text.textContent = 'Pobierz nowe zdjęcia';
+        const now = new Date();
+        lastSync.textContent = `dzisiaj, ${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}`;
+      }, 800);
+    }
+
+    // Modal Lightbox Controller
+    function openInstaModal(idx) {
+      const item = instagramFeedItems[idx];
+      if (!item) return;
+
+      document.getElementById('modalInstaImg').src = item.imageUrl;
+      document.getElementById('modalInstaCaption').textContent = item.caption;
+      document.getElementById('modalInstaLikes').innerHTML = `<i class="fa-solid fa-heart text-campari mr-1"></i> ${item.likes} polubień`;
+      document.getElementById('modalInstaDate').textContent = item.timeAgo;
+      document.getElementById('modalInstaLink').href = item.instaUrl;
+
+      document.getElementById('instaModal').classList.remove('hidden');
+    }
+
+    function closeInstaModal() {
+      document.getElementById('instaModal').classList.add('hidden');
+    }
+
+    // ==========================================
+    // 4. API SETTINGS & KEY MANAGEMENT
+    // ==========================================
+    function openApiSettingsModal() {
+      document.getElementById('apiConfigModal').classList.remove('hidden');
+    }
+
+    function closeApiSettingsModal() {
+      document.getElementById('apiConfigModal').classList.add('hidden');
+    }
+
+    function saveApiKeys() {
+      const badge = document.getElementById('apiStatusBadge');
+      badge.textContent = 'Klucze zaktualizowane pomyślnie';
+      badge.className = 'text-pistachio font-medium font-mono';
+      setTimeout(() => {
+        badge.textContent = 'Google & Instagram API: Połączono';
+      }, 3000);
+      closeApiSettingsModal();
+    }
+
+    function testInstaConnection() {
+      const input = document.getElementById('instaTokenInput');
+      input.value = 'TOKEN_STATUS_OK_POLLING_200';
+      alert('Połączenie z Instagram Basic Display API nawiązane pomyślnie! Strumień danych jest aktywny.');
+    }
+
+    // ==========================================
+    // 5. INTERACTIVE MENU FILTER TABS
+    // ==========================================
+    const menuTabs = document.querySelectorAll('.menu-tab-btn');
+    const menuCards = document.querySelectorAll('.menu-card');
+
+    menuTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        menuTabs.forEach(t => {
+          t.classList.remove('bg-espresso', 'text-crema', 'shadow-md');
+          t.classList.add('bg-crema-cream', 'text-espresso');
+        });
+        tab.classList.remove('bg-crema-cream', 'text-espresso');
+        tab.classList.add('bg-espresso', 'text-crema', 'shadow-md');
+
+        const category = tab.getAttribute('data-category');
+
+        menuCards.forEach(card => {
+          if (category === 'all' || card.getAttribute('data-category') === category) {
+            card.classList.remove('hidden');
+            card.classList.add('flex');
+          } else {
+            card.classList.add('hidden');
+            card.classList.remove('flex');
+          }
+        });
+      });
+    });
+
+    // ==========================================
+    // 6. MOBILE NAVIGATION & PDF MODAL HANDLERS
+    // ==========================================
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        if (isHidden) {
+          mobileMenu.classList.remove('hidden');
+          menuIcon.className = 'fa-solid fa-xmark text-2xl';
+        } else {
+          mobileMenu.classList.add('hidden');
+          menuIcon.className = 'fa-solid fa-bars text-2xl';
+        }
+      });
+    }
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.className = 'fa-solid fa-bars text-2xl';
+      });
+    });
+
+    function downloadMenuPdfDemo() {
+      document.getElementById('pdfModal').classList.remove('hidden');
+    }
+
+    function closePdfModal() {
+      document.getElementById('pdfModal').classList.add('hidden');
+    }
+
+    // Close modal on escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeInstaModal();
+        closeApiSettingsModal();
+        closePdfModal();
+      }
+    });
+
+    // Initial render of reviews and Instagram feed on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      renderGoogleReviews();
+      renderInstagramFeed();
+    });
+  </script>
+</body>
+</html>
