@@ -123,15 +123,6 @@
       background: linear-gradient(90deg, #264B2E 0%, #264B2E 33.33%, #FAF7F2 33.33%, #FAF7F2 66.66%, #B93025 66.66%, #B93025 100%);
     }
 
-    /* Shimmer effect for real-time sync states */
-    @keyframes pulseGlow {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.65; transform: scale(1.05); }
-    }
-    .pulse-glow {
-      animation: pulseGlow 2.5s ease-in-out infinite;
-    }
-
     /* Custom Scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
@@ -153,7 +144,7 @@
 
   <div class="h-1.5 w-full italian-flag-strip sticky top-0 z-50"></div>
 
-  <!-- Top Announcement & Live API Status Bar -->
+  <!-- Top Announcement Bar -->
   <div class="bg-espresso-dark text-crema text-[11px] sm:text-xs py-2 px-4 border-b border-white/10 relative z-40">
     <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
       <div class="flex items-center space-x-4 tracking-wide">
@@ -162,21 +153,19 @@
           ul. Jemiołowa 30/U1, Wrocław (Krzyki)
         </span>
         <span class="hidden md:inline text-white/30">•</span>
-        <span class="hidden md:flex items-center gap-1.5 text-crema/80">
+        <span class="flex items-center gap-1.5 text-crema/80">
           <i class="fa-solid fa-paw text-caramel"></i>
           Lokal w 100% dog friendly
         </span>
       </div>
 
-      <!-- Live API Heartbeats -->
-      <div class="flex items-center space-x-3 text-[11px]">
-        <div class="flex items-center gap-1.5 bg-white/5 border border-white/10 px-2.5 py-0.5 rounded-full">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
-          <span class="text-emerald-300 font-medium font-mono" id="apiStatusBadge">Google & Instagram API: Połączono</span>
-        </div>
-        <button onclick="openApiSettingsModal()" class="text-caramel-light hover:text-white transition underline cursor-pointer ml-2">
-          <i class="fa-solid fa-sliders mr-1"></i>Klucze API
-        </button>
+      <div class="flex items-center space-x-4 text-[11px] text-crema-cream/80">
+        <span>Codziennie: 09:00 – 19:00</span>
+        <span class="hidden sm:inline text-white/30">•</span>
+        <a href="tel:+48713000000" class="hover:text-white transition flex items-center gap-1">
+          <i class="fa-solid fa-phone text-pistachio text-[10px]"></i>
+          +48 71 300 00 00
+        </a>
       </div>
     </div>
   </div>
@@ -185,16 +174,14 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
-        <!-- Logo Emblem based on uploaded image -->
+        <!-- Logo Emblem -->
         <a href="#" class="flex items-center gap-3.5 group">
           <div class="relative w-12 h-12 md:w-14 md:h-14 rounded-full bg-crema border-2 border-espresso flex items-center justify-center p-0.5 shadow-md group-hover:scale-105 transition-transform duration-300">
             <div class="w-full h-full rounded-full border border-dashed border-espresso-light/40 flex items-center justify-center bg-[#FDFBF7] relative overflow-hidden">
               <svg viewBox="0 0 100 100" class="w-full h-full p-1" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="50" cy="50" r="47" stroke="#21130d" stroke-width="2.5"/>
-                <!-- Italian Flag Arcs -->
                 <path d="M 12,50 A 38,38 0 0,1 50,12" stroke="#264B2E" stroke-width="3.5" stroke-linecap="round"/>
                 <path d="M 88,50 A 38,38 0 0,1 50,88" stroke="#B93025" stroke-width="3.5" stroke-linecap="round"/>
-                <!-- Silhouette: Fidel/Gentleman with hat drinking espresso -->
                 <g stroke="#21130d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none">
                   <path d="M30 43 C33 34, 45 32, 53 33 C60 34, 62 42, 62 43 Z" fill="#21130d"/>
                   <path d="M24 43 Q48 40 68 43" stroke-width="2.8"/>
@@ -231,7 +218,7 @@
           </a>
           <a href="#instagram-feed" class="text-espresso hover:text-campari transition-colors py-1 flex items-center gap-1">
             <i class="fa-brands fa-instagram text-campari text-xs"></i>
-            <span>Live Feed</span>
+            <span>Galeria</span>
           </a>
           <a href="#kawa" class="text-espresso hover:text-campari transition-colors py-1">Ziarna</a>
           <a href="#lokalizacja" class="text-espresso hover:text-campari transition-colors py-1">Dojazd</a>
@@ -262,8 +249,8 @@
     <div id="mobileMenu" class="hidden sm:hidden bg-crema border-b border-crema-border px-5 pt-3 pb-6 space-y-3">
       <a href="#menu" class="mobile-nav-link block text-base font-semibold py-2 text-espresso hover:text-campari border-b border-crema-border/50">Menu & Cennik</a>
       <a href="#o-nas" class="mobile-nav-link block text-base font-semibold py-2 text-espresso hover:text-campari border-b border-crema-border/50">O nas & Wyróżniki</a>
-      <a href="#opinie" class="mobile-nav-link block text-base font-semibold py-2 text-espresso hover:text-campari border-b border-crema-border/50">Opinie Google (Live API)</a>
-      <a href="#instagram-feed" class="mobile-nav-link block text-base font-semibold py-2 text-espresso hover:text-campari border-b border-crema-border/50">Instagram Live Feed</a>
+      <a href="#opinie" class="mobile-nav-link block text-base font-semibold py-2 text-espresso hover:text-campari border-b border-crema-border/50">Opinie Gości</a>
+      <a href="#instagram-feed" class="mobile-nav-link block text-base font-semibold py-2 text-espresso hover:text-campari border-b border-crema-border/50">Galeria zdjęć</a>
       <a href="#kawa" class="mobile-nav-link block text-base font-semibold py-2 text-espresso hover:text-campari border-b border-crema-border/50">Kawa & Paczki Ziaren</a>
       <a href="#lokalizacja" class="mobile-nav-link block text-base font-semibold py-2 text-espresso hover:text-campari">Kontakt & Dojazd</a>
       
@@ -272,19 +259,16 @@
           <i class="fa-solid fa-location-dot text-campari"></i>
           Nawiguj do Jemiołowej 30/U1
         </a>
-        <button onclick="openApiSettingsModal()" class="w-full text-center py-2.5 bg-crema-cream border border-crema-border text-espresso font-semibold rounded-xl text-xs flex items-center justify-center gap-2">
-          <i class="fa-solid fa-gear text-caramel"></i>
-          Konfiguracja API Google & Instagram
-        </button>
       </div>
     </div>
   </header>
 
+  <!-- Hero Section -->
   <section class="relative bg-espresso text-crema overflow-hidden min-h-[85vh] flex items-center">
     <div class="absolute inset-0 z-0">
       <img 
         src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=2000&q=80" 
-        alt="Klimatyczne wnętrze kawiarni Bella Ciao"
+        alt="Klimatyczne wnętrze kawiarni Bella Ciao" 
         class="w-full h-full object-cover object-center filter brightness-[0.34] contrast-[1.1] scale-105"
         onerror="this.src='https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=2000&q=80'"
       >
@@ -335,7 +319,7 @@
           </a>
         </div>
 
-        <!-- Social Proof Metric Row -->
+        <!-- Metric Row -->
         <div class="mt-12 pt-8 border-t border-white/15 grid grid-cols-3 gap-4 text-crema/80">
           <div>
             <div class="text-2xl font-bold font-serif text-caramel-light">4.9 ★</div>
@@ -355,6 +339,7 @@
     </div>
   </section>
 
+  <!-- Menu Section -->
   <section id="menu" class="py-24 bg-paper-texture relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -566,13 +551,14 @@
         </div>
         <button onclick="downloadMenuPdfDemo()" class="inline-flex items-center gap-2.5 bg-espresso hover:bg-espresso-light text-crema px-6 py-3.5 rounded-xl font-semibold text-sm transition-all shadow hover:shadow-md whitespace-nowrap">
           <i class="fa-solid fa-arrow-down-to-line text-caramel-light"></i>
-          <span>Pobierz Menu PDF (1.4 MB)</span>
+          <span>Pobierz Menu PDF</span>
         </button>
       </div>
 
     </div>
   </section>
 
+  <!-- Google Reviews Section -->
   <section id="opinie" class="py-24 bg-white border-y border-crema-border relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -581,17 +567,17 @@
         <div>
           <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-campari bg-campari-light px-3 py-1 rounded-full mb-3">
             <i class="fa-brands fa-google text-campari"></i>
-            <span>Google Places API • Live Sync</span>
+            <span>Opinie z Google Maps</span>
           </div>
           <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-espresso">
             Opinie naszych gości
           </h2>
           <p class="text-espresso/70 text-base sm:text-lg mt-2 max-w-xl">
-            Prawdziwe recenzje prosto z profilu Google Maps Bella Ciao Wrocław. Aktualizowane automatycznie przez interfejs API.
+            Prawdziwe recenzje prosto z profilu Google Maps Bella Ciao Wrocław na Jemiołowej.
           </p>
         </div>
 
-        <!-- Google Score Badge & API Trigger -->
+        <!-- Google Score Badge -->
         <div class="flex flex-wrap items-center gap-4 bg-crema p-4 sm:p-5 rounded-2xl border border-crema-border shadow-sm">
           <div class="flex items-center gap-3">
             <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-amber-500 text-2xl shadow-sm">
@@ -613,35 +599,23 @@
           </div>
 
           <div class="flex items-center gap-2 ml-auto">
-            <button onclick="refreshGoogleReviews()" id="refreshReviewsBtn" class="px-3.5 py-2 bg-white hover:bg-crema-cream text-espresso border border-crema-border rounded-xl text-xs font-semibold flex items-center gap-1.5 transition">
-              <i class="fa-solid fa-arrows-rotate text-pistachio" id="refreshReviewIcon"></i>
-              <span>Odśwież przez API</span>
-            </button>
-            <a href="https://search.google.com/local/writereview?placeid=ChIJgfpbbHfCD0cRT8UiRJn2Y2s" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-espresso hover:bg-espresso-light text-crema rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow">
+            <a href="https://search.google.com/local/writereview?placeid=ChIJgfpbbHfCD0cRT8UiRJn2Y2s" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-espresso hover:bg-espresso-light text-crema rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow">
               <i class="fa-solid fa-pen-nib text-caramel-light"></i>
-              <span>Dodaj opinię</span>
+              <span>Dodaj opinię w Google</span>
             </a>
           </div>
         </div>
       </div>
 
-      <!-- Reviews Live Grid -->
+      <!-- Reviews Grid -->
       <div id="googleReviewsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Injected dynamically via JS / Google Places API logic -->
-      </div>
-
-      <!-- Sync Status Footer -->
-      <div class="mt-8 flex flex-wrap items-center justify-between text-xs text-espresso/60 pt-4 border-t border-crema-border/60">
-        <span class="flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-          Ostatnia synchronizacja z Google Maps: <strong id="lastGoogleSyncTime" class="text-espresso font-mono">przed chwilą</strong>
-        </span>
-        <span class="font-mono">ID Miejsca: ChIJgfpbbHfCD0cRT8UiRJn2Y2s (Jemiołowa 30)</span>
+        <!-- Renderowane przez JS -->
       </div>
 
     </div>
   </section>
 
+  <!-- Instagram Feed Section -->
   <section id="instagram-feed" class="py-24 bg-paper-texture relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -650,50 +624,33 @@
         <div>
           <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-pistachio-dark bg-pistachio-light px-3 py-1 rounded-full mb-3">
             <i class="fa-brands fa-instagram text-campari"></i>
-            <span>Instagram Basic Display API • Live Polling</span>
+            <span>Świeże kadry</span>
           </div>
           <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-espresso">
             Świeże ujęcia z Jemiołowej
           </h2>
           <p class="text-espresso/70 text-base sm:text-lg mt-2 max-w-2xl">
-            Automatyczny strumień zdjęć prosto z naszego profilu <a href="https://www.instagram.com/bellaaa_ciaooo_/" target="_blank" class="font-semibold text-campari hover:underline">@bellaaa_ciaooo_</a>. Parząca się kawa, uśmiechy i pupile.
+            Zdjęcia prosto z naszego profilu <a href="https://www.instagram.com/bellaaa_ciaooo_/" target="_blank" class="font-semibold text-campari hover:underline">@bellaaa_ciaooo_</a>. Parząca się kawa, uśmiechy i czworonożni goście.
           </p>
         </div>
 
         <div class="flex flex-wrap items-center gap-3">
-          <button onclick="refreshInstagramFeed()" id="syncInstaBtn" class="px-4 py-2.5 bg-white hover:bg-crema-cream text-espresso border border-crema-border rounded-xl text-xs font-semibold flex items-center gap-2 transition shadow-sm">
-            <i class="fa-solid fa-rotate text-campari" id="syncInstaIcon"></i>
-            <span id="syncInstaBtnText">Pobierz nowe zdjęcia</span>
-          </button>
-          <a href="https://www.instagram.com/bellaaa_ciaooo_/" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 text-white rounded-xl text-xs font-bold transition shadow hover:opacity-95 flex items-center gap-2">
+          <a href="https://www.instagram.com/bellaaa_ciaooo_/" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 text-white rounded-xl text-xs font-bold transition shadow hover:opacity-95 flex items-center gap-2">
             <i class="fa-brands fa-instagram text-base"></i>
-            <span>Obserwuj profil</span>
+            <span>Obserwuj @bellaaa_ciaooo_</span>
           </a>
         </div>
       </div>
 
       <!-- Instagram Gallery Grid -->
       <div id="instagramFeedGrid" class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-        <!-- Dynamically rendered via Instagram API simulation / live engine -->
-      </div>
-
-      <!-- Instagram Sync Micro status -->
-      <div class="mt-8 bg-white/70 border border-crema-border rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-espresso/70">
-        <div class="flex items-center gap-2">
-          <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-          </span>
-          <span>Webhook Instagrama aktywny: automatyczne odświeżanie feedu co 60 sekund.</span>
-        </div>
-        <div class="font-mono text-[11px] text-espresso/50">
-          Ostatni ping: <span id="instaLastSync">dzisiaj, 17:42</span>
-        </div>
+        <!-- Renderowane przez JS -->
       </div>
 
     </div>
   </section>
 
+  <!-- About Section -->
   <section id="o-nas" class="py-24 bg-white border-t border-crema-border relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -741,7 +698,7 @@
           </div>
         </div>
 
-        <!-- Atmospheric Visual Column -->
+        <!-- Visual Column -->
         <div class="lg:col-span-5 relative">
           <div class="relative mx-auto max-w-md lg:max-w-none">
             <div class="absolute -top-4 -left-4 w-full h-full rounded-3xl border-2 border-dashed border-caramel/50 -z-10"></div>
@@ -749,7 +706,7 @@
             <div class="rounded-3xl overflow-hidden shadow-2xl bg-espresso aspect-[4/5] relative">
               <img 
                 src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1000&q=80" 
-                alt="Ekstrakcja espresso w Bella Ciao"
+                alt="Ekstrakcja espresso w Bella Ciao" 
                 class="w-full h-full object-cover filter contrast-[1.05]"
               >
               <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-espresso via-espresso/60 to-transparent p-6 text-crema">
@@ -798,7 +755,7 @@
             Wi-Fi & Praca przy Kawie
           </h3>
           <p class="text-sm text-espresso/70 leading-relaxed">
-            Wydajne łącze światłowodowe, wygodne stoliki, łatwo dostępne gniazdka oraz spokojny jazz w tle — idealne warunki na home office czy spotkanie.
+            Wydajne łącze, wygodne stoliki, łatwo dostępne gniazdka oraz spokojny jazz w tle — idealne warunki na home office czy spotkanie.
           </p>
         </div>
 
@@ -820,6 +777,7 @@
     </div>
   </section>
 
+  <!-- Coffee Beans Section -->
   <section id="kawa" class="py-20 bg-espresso text-crema relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
@@ -896,6 +854,7 @@
     </div>
   </section>
 
+  <!-- Community Event Section -->
   <section id="wydarzenia" class="py-20 bg-paper-texture">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -935,6 +894,7 @@
     </div>
   </section>
 
+  <!-- Location Section -->
   <section id="lokalizacja" class="py-24 bg-white border-t border-crema-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -1034,6 +994,7 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="bg-espresso-dark text-crema border-t border-white/10 pt-16 pb-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
@@ -1067,8 +1028,8 @@
           <h5 class="text-xs uppercase tracking-widest text-caramel-light font-bold">Nawigacja</h5>
           <ul class="space-y-2 text-sm text-crema-cream/80">
             <li><a href="#menu" class="hover:text-caramel transition">Karta Menu & Cennik</a></li>
-            <li><a href="#opinie" class="hover:text-caramel transition">Opinie Google (Live API)</a></li>
-            <li><a href="#instagram-feed" class="hover:text-caramel transition">Instagram Live Feed</a></li>
+            <li><a href="#opinie" class="hover:text-caramel transition">Opinie Gości</a></li>
+            <li><a href="#instagram-feed" class="hover:text-caramel transition">Galeria zdjęć</a></li>
             <li><a href="#o-nas" class="hover:text-caramel transition">O nas & Wyróżniki</a></li>
             <li><a href="#lokalizacja" class="hover:text-caramel transition">Kontakt & Dojazd</a></li>
           </ul>
@@ -1097,6 +1058,7 @@
     </div>
   </footer>
 
+  <!-- Floating Mobile CTA Buttons -->
   <div class="fixed bottom-5 right-5 z-40 flex flex-col gap-2.5 sm:hidden">
     <a href="https://maps.google.com/?q=Bella+Ciao+Jemiołowa+30+Wrocław" target="_blank" rel="noopener noreferrer" class="w-13 h-13 p-3.5 bg-campari text-white rounded-full shadow-2xl flex items-center justify-center text-xl active:scale-95 transition" aria-label="Nawiguj">
       <i class="fa-solid fa-diamond-turn-right"></i>
@@ -1143,61 +1105,6 @@
     </div>
   </div>
 
-  <!-- API Settings & Credentials Configuration Modal -->
-  <div id="apiConfigModal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden flex items-center justify-center p-4">
-    <div class="bg-crema rounded-3xl max-w-xl w-full p-6 sm:p-8 text-espresso border border-crema-border shadow-2xl space-y-5">
-      <div class="flex items-center justify-between border-b border-crema-border pb-4">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-xl bg-pistachio-light text-pistachio-dark flex items-center justify-center text-lg">
-            <i class="fa-solid fa-sliders"></i>
-          </div>
-          <div>
-            <h3 class="font-serif font-bold text-xl text-espresso">Integracja Live API</h3>
-            <p class="text-xs text-espresso/60">Instagram Graph API & Google Places API</p>
-          </div>
-        </div>
-        <button onclick="closeApiSettingsModal()" class="text-espresso/50 hover:text-campari">
-          <i class="fa-solid fa-xmark text-xl"></i>
-        </button>
-      </div>
-
-      <p class="text-xs text-espresso/70 leading-relaxed">
-        Strona posiada silnik automatycznego pobierania danych. Możesz podać własne tokeny produkcyjne lub korzystać z automatycznego, stale odświeżanego strumienia danych cache & webhook.
-      </p>
-
-      <div class="space-y-4 text-xs">
-        <div>
-          <label class="block font-semibold mb-1 text-espresso">Google Places API Key / Place ID</label>
-          <div class="flex gap-2">
-            <input type="text" id="googleApiKeyInput" value="ChIJgfpbbHfCD0cRT8UiRJn2Y2s" class="w-full bg-white border border-crema-border rounded-xl px-3 py-2 text-xs font-mono focus:outline-none focus:border-campari">
-            <button onclick="saveApiKeys()" class="px-3 py-2 bg-espresso text-crema font-bold rounded-xl whitespace-nowrap hover:bg-espresso-light">Zapisz</button>
-          </div>
-          <span class="text-[10px] text-espresso/50 mt-1 block">Pobiera na żywo oceny, treść najnowszych recenzji oraz awatary autorów.</span>
-        </div>
-
-        <div>
-          <label class="block font-semibold mb-1 text-espresso">Instagram Basic Display Access Token</label>
-          <div class="flex gap-2">
-            <input type="password" id="instaTokenInput" value="IGQVJXWDRvRTh3d05q...VALID_POLL_TOKEN" class="w-full bg-white border border-crema-border rounded-xl px-3 py-2 text-xs font-mono focus:outline-none focus:border-campari">
-            <button onclick="testInstaConnection()" class="px-3 py-2 bg-pistachio text-white font-bold rounded-xl whitespace-nowrap hover:bg-pistachio-dark">Testuj</button>
-          </div>
-          <span class="text-[10px] text-espresso/50 mt-1 block">Zapewnia autoryzowany dostęp do najświeższych zdjęć i relacji konta @bellaaa_ciaooo_.</span>
-        </div>
-      </div>
-
-      <div class="bg-white p-3.5 rounded-2xl border border-crema-border flex items-center justify-between text-xs">
-        <span class="text-espresso/70">Częstotliwość automatycznego odpytywania:</span>
-        <span class="font-bold text-pistachio font-mono">Co 60 sekund</span>
-      </div>
-
-      <div class="pt-2 flex gap-3">
-        <button onclick="closeApiSettingsModal()" class="w-full bg-espresso text-crema py-3 rounded-xl font-bold text-xs hover:bg-espresso-light transition">
-          Zatwierdź i zamknij
-        </button>
-      </div>
-    </div>
-  </div>
-
   <!-- PDF Modal Mock -->
   <div id="pdfModal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
     <div class="bg-crema rounded-2xl max-w-md w-full p-6 text-espresso border border-crema-border shadow-2xl text-center space-y-4">
@@ -1209,7 +1116,7 @@
         Pobieranie oficjalnej karty lokalu (PDF) wraz z listą alergenów i gramaturami na Jemiołowej 30/U1.
       </p>
       <div class="bg-white p-3 rounded-xl border border-crema-border text-xs text-espresso/60 font-mono">
-        Menu_Bella_Ciao_Jemiolowa_2026.pdf (1.4 MB)
+        Menu_Bella_Ciao_Jemiolowa.pdf
       </div>
       <button onclick="closePdfModal()" class="w-full bg-espresso text-crema py-2.5 rounded-xl font-semibold text-sm hover:bg-espresso-light transition">
         Zamknij okno
@@ -1219,7 +1126,7 @@
 
   <script>
     // ==========================================
-    // 1. LIVE OPENING HOURS CALCULATION ENGINE
+    // 1. LIVE OPENING HOURS CALCULATION
     // ==========================================
     function calculateOpeningStatus() {
       const now = new Date();
@@ -1253,7 +1160,7 @@
     setInterval(calculateOpeningStatus, 60000);
 
     // ==========================================
-    // 2. GOOGLE REVIEWS LIVE API ENGINE
+    // 2. GOOGLE REVIEWS
     // ==========================================
     const googleReviewsDatabase = [
       {
@@ -1261,36 +1168,24 @@
         author: 'Katarzyna Wiśniewska',
         avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80',
         rating: 5,
-        timeAgo: '12 minut temu',
-        text: 'Nareszcie prawdziwe włoskie espresso na Krzykach! Croissant z kremem pistacjowym to absolutne mistrzostwo świata, ciasto jest lekkie i chrupiące. Piesek dostał od razu miskę z wodą. Piękne wnętrze i świetna obsługa.',
-        verified: true
+        timeAgo: 'Niedawno',
+        text: 'Nareszcie prawdziwe włoskie espresso na Krzykach! Croissant z kremem pistacjowym to absolutne mistrzostwo świata, ciasto jest lekkie i chrupiące. Piesek dostał od razu miskę z wodą. Piękne wnętrze i świetna obsługa.'
       },
       {
         id: 'rev_2',
         author: 'Michał Kowalczyk',
         avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80',
         rating: 5,
-        timeAgo: '2 godziny temu',
-        text: 'Najlepsza ceremonialna matcha we Wrocławiu. Często wpadam tu z laptopem popracować — stabilne wifi, pyszne flat white na owsianym i bardzo kulturalna atmosfera. Muzyka gra cicho w tle.',
-        verified: true
+        timeAgo: 'W tym tygodniu',
+        text: 'Najlepsza ceremonialna matcha we Wrocławiu. Często wpadam tu z laptopem popracować — stabilne wifi, pyszne flat white na owsianym i bardzo kulturalna atmosfera. Muzyka gra cicho w tle.'
       },
       {
         id: 'rev_3',
         author: 'Aleksandra Dąbrowska',
         avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80',
         rating: 5,
-        timeAgo: 'Wczoraj',
-        text: 'Znakomity retro klimat. Tiramisu rozpływa się w ustach, czuć prawdziwy likier i porządne espresso. Kupiłam też paczkę ziaren do kawiarki do domu — barista zmielił idealnie na miejscu.',
-        verified: true
-      },
-      {
-        id: 'rev_4',
-        author: 'Tomasz Bąk',
-        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80',
-        rating: 5,
-        timeAgo: '3 dni temu',
-        text: 'Lokalizacja na Jemiołowej to strzał w dziesiątkę. Super akcja z dyniami i świetne drinki kawowe na zimno. Dirty black i espresso tonic w upalne dni nie mają sobie równych.',
-        verified: true
+        timeAgo: 'W tym tygodniu',
+        text: 'Znakomity retro klimat. Tiramisu rozpływa się w ustach, czuć prawdziwy likier i porządne espresso. Kupiłam też paczkę ziaren do kawiarki do domu — barista zmielił idealnie na miejscu.'
       }
     ];
 
@@ -1298,7 +1193,7 @@
       const container = document.getElementById('googleReviewsContainer');
       if (!container) return;
 
-      container.innerHTML = googleReviewsDatabase.slice(0, 3).map(rev => `
+      container.innerHTML = googleReviewsDatabase.map(rev => `
         <div class="bg-crema rounded-2xl p-6 border border-crema-border hover:border-caramel/40 transition-all duration-200 flex flex-col justify-between shadow-sm">
           <div>
             <div class="flex items-center justify-between mb-4">
@@ -1329,25 +1224,8 @@
       `).join('');
     }
 
-    function refreshGoogleReviews() {
-      const icon = document.getElementById('refreshReviewIcon');
-      const timeTag = document.getElementById('lastGoogleSyncTime');
-      icon.classList.add('fa-spin');
-
-      setTimeout(() => {
-        // Rotate reviews order to demonstrate live real-time API syncing
-        const first = googleReviewsDatabase.shift();
-        googleReviewsDatabase.push(first);
-        renderGoogleReviews();
-
-        icon.classList.remove('fa-spin');
-        const now = new Date();
-        timeTag.textContent = `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}`;
-      }, 700);
-    }
-
     // ==========================================
-    // 3. INSTAGRAM FEED & LIVE POLLING ENGINE
+    // 3. INSTAGRAM FEED
     // ==========================================
     let instagramFeedItems = [
       {
@@ -1356,7 +1234,7 @@
         caption: 'Poranne espresso na Jemiołowej to rytuał, bez którego nie zaczynamy dnia ☕️ Nasz młyn mieli świeżą Arabikę od rana. Wpadajcie na Krzyki!',
         likes: 194,
         comments: 21,
-        timeAgo: '35 minut temu',
+        timeAgo: 'Niedawno',
         instaUrl: 'https://www.instagram.com/bellaaa_ciaooo_/'
       },
       {
@@ -1365,7 +1243,7 @@
         caption: 'Chrupiące croissanty z autorskim sycylijskim kremem pistacjowym prosto z pieca 🥐 Kto pierwszy, ten lepszy!',
         likes: 312,
         comments: 42,
-        timeAgo: '4 godziny temu',
+        timeAgo: 'Wczoraj',
         instaUrl: 'https://www.instagram.com/bellaaa_ciaooo_/'
       },
       {
@@ -1374,7 +1252,7 @@
         caption: 'Zielona ceremonialna Matcha z Uji ubijana chasenem na mleku owsianym 🍵 Idealny balans energii bez kofeinowego zjazdu.',
         likes: 278,
         comments: 19,
-        timeAgo: 'Wczoraj',
+        timeAgo: 'W tym tygodniu',
         instaUrl: 'https://www.instagram.com/bellaaa_ciaooo_/'
       },
       {
@@ -1383,7 +1261,7 @@
         caption: 'Kolejny merdający gość pod stolikiem 🐾 Przypominamy: Bella Ciao jest w 100% otwarta dla Waszych piesków!',
         likes: 452,
         comments: 57,
-        timeAgo: '2 dni temu',
+        timeAgo: 'W tym tygodniu',
         instaUrl: 'https://www.instagram.com/bellaaa_ciaooo_/'
       }
     ];
@@ -1396,10 +1274,9 @@
         <div onclick="openInstaModal(${idx})" class="group relative rounded-2xl overflow-hidden aspect-square bg-crema-cream shadow-sm cursor-pointer border border-crema-border">
           <img src="${item.imageUrl}" alt="${item.caption.slice(0, 40)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           
-          <!-- Live Overlay on Hover -->
           <div class="absolute inset-0 bg-espresso/70 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col justify-between p-4 text-crema">
             <div class="flex justify-between items-center text-xs">
-              <span class="bg-black/40 px-2 py-0.5 rounded font-mono text-[10px]"><i class="fa-brands fa-instagram text-campari mr-1"></i> Live</span>
+              <span class="bg-black/40 px-2 py-0.5 rounded font-mono text-[10px]"><i class="fa-brands fa-instagram text-campari mr-1"></i> Instagram</span>
               <span class="text-[10px] text-crema/80 font-mono">${item.timeAgo}</span>
             </div>
             <div class="flex items-center justify-center gap-4 text-sm font-bold">
@@ -1414,28 +1291,6 @@
       `).join('');
     }
 
-    function refreshInstagramFeed() {
-      const icon = document.getElementById('syncInstaIcon');
-      const text = document.getElementById('syncInstaBtnText');
-      const lastSync = document.getElementById('instaLastSync');
-      
-      icon.classList.add('fa-spin');
-      text.textContent = 'Łączenie z Graph API...';
-
-      setTimeout(() => {
-        // Swap items to simulate new live post stream
-        const first = instagramFeedItems.shift();
-        instagramFeedItems.push(first);
-        renderInstagramFeed();
-
-        icon.classList.remove('fa-spin');
-        text.textContent = 'Pobierz nowe zdjęcia';
-        const now = new Date();
-        lastSync.textContent = `dzisiaj, ${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}`;
-      }, 800);
-    }
-
-    // Modal Lightbox Controller
     function openInstaModal(idx) {
       const item = instagramFeedItems[idx];
       if (!item) return;
@@ -1454,34 +1309,7 @@
     }
 
     // ==========================================
-    // 4. API SETTINGS & KEY MANAGEMENT
-    // ==========================================
-    function openApiSettingsModal() {
-      document.getElementById('apiConfigModal').classList.remove('hidden');
-    }
-
-    function closeApiSettingsModal() {
-      document.getElementById('apiConfigModal').classList.add('hidden');
-    }
-
-    function saveApiKeys() {
-      const badge = document.getElementById('apiStatusBadge');
-      badge.textContent = 'Klucze zaktualizowane pomyślnie';
-      badge.className = 'text-pistachio font-medium font-mono';
-      setTimeout(() => {
-        badge.textContent = 'Google & Instagram API: Połączono';
-      }, 3000);
-      closeApiSettingsModal();
-    }
-
-    function testInstaConnection() {
-      const input = document.getElementById('instaTokenInput');
-      input.value = 'TOKEN_STATUS_OK_POLLING_200';
-      alert('Połączenie z Instagram Basic Display API nawiązane pomyślnie! Strumień danych jest aktywny.');
-    }
-
-    // ==========================================
-    // 5. INTERACTIVE MENU FILTER TABS
+    // 4. MENU FILTER TABS
     // ==========================================
     const menuTabs = document.querySelectorAll('.menu-tab-btn');
     const menuCards = document.querySelectorAll('.menu-card');
@@ -1510,7 +1338,7 @@
     });
 
     // ==========================================
-    // 6. MOBILE NAVIGATION & PDF MODAL HANDLERS
+    // 5. MOBILE NAVIGATION & PDF MODAL
     // ==========================================
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -1545,16 +1373,13 @@
       document.getElementById('pdfModal').classList.add('hidden');
     }
 
-    // Close modal on escape key
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         closeInstaModal();
-        closeApiSettingsModal();
         closePdfModal();
       }
     });
 
-    // Initial render of reviews and Instagram feed on page load
     window.addEventListener('DOMContentLoaded', () => {
       renderGoogleReviews();
       renderInstagramFeed();
